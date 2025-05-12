@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		A1AE0B642DD240D500D87FDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1AE0B422DD240D300D87FDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1AE0B492DD240D300D87FDE;
+			remoteInfo = "Nebula Hunters Game";
+		};
+		A1AE0B6E2DD240D500D87FDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1AE0B422DD240D300D87FDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1AE0B492DD240D300D87FDE;
+			remoteInfo = "Nebula Hunters Game";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A1AE0B4A2DD240D300D87FDE /* Nebula Hunters Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nebula Hunters Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1AE0B632DD240D500D87FDE /* Nebula Hunters GameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nebula Hunters GameTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1AE0B6D2DD240D500D87FDE /* Nebula Hunters GameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nebula Hunters GameUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		A1AE0B4C2DD240D300D87FDE /* Nebula Hunters Game */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Nebula Hunters Game";
+			sourceTree = "<group>";
+		};
+		A1AE0B662DD240D500D87FDE /* Nebula Hunters GameTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Nebula Hunters GameTests";
+			sourceTree = "<group>";
+		};
+		A1AE0B702DD240D500D87FDE /* Nebula Hunters GameUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Nebula Hunters GameUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1AE0B472DD240D300D87FDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1AE0B602DD240D500D87FDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1AE0B6A2DD240D500D87FDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A1AE0B412DD240D300D87FDE = {
+			isa = PBXGroup;
+			children = (
+				A1AE0B4C2DD240D300D87FDE /* Nebula Hunters Game */,
+				A1AE0B662DD240D500D87FDE /* Nebula Hunters GameTests */,
+				A1AE0B702DD240D500D87FDE /* Nebula Hunters GameUITests */,
+				A1AE0B4B2DD240D300D87FDE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A1AE0B4B2DD240D300D87FDE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1AE0B4A2DD240D300D87FDE /* Nebula Hunters Game.app */,
+				A1AE0B632DD240D500D87FDE /* Nebula Hunters GameTests.xctest */,
+				A1AE0B6D2DD240D500D87FDE /* Nebula Hunters GameUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A1AE0B492DD240D300D87FDE /* Nebula Hunters Game */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1AE0B772DD240D500D87FDE /* Build configuration list for PBXNativeTarget "Nebula Hunters Game" */;
+			buildPhases = (
+				A1AE0B462DD240D300D87FDE /* Sources */,
+				A1AE0B472DD240D300D87FDE /* Frameworks */,
+				A1AE0B482DD240D300D87FDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A1AE0B4C2DD240D300D87FDE /* Nebula Hunters Game */,
+			);
+			name = "Nebula Hunters Game";
+			packageProductDependencies = (
+			);
+			productName = "Nebula Hunters Game";
+			productReference = A1AE0B4A2DD240D300D87FDE /* Nebula Hunters Game.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A1AE0B622DD240D500D87FDE /* Nebula Hunters GameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1AE0B7A2DD240D500D87FDE /* Build configuration list for PBXNativeTarget "Nebula Hunters GameTests" */;
+			buildPhases = (
+				A1AE0B5F2DD240D500D87FDE /* Sources */,
+				A1AE0B602DD240D500D87FDE /* Frameworks */,
+				A1AE0B612DD240D500D87FDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1AE0B652DD240D500D87FDE /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A1AE0B662DD240D500D87FDE /* Nebula Hunters GameTests */,
+			);
+			name = "Nebula Hunters GameTests";
+			packageProductDependencies = (
+			);
+			productName = "Nebula Hunters GameTests";
+			productReference = A1AE0B632DD240D500D87FDE /* Nebula Hunters GameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A1AE0B6C2DD240D500D87FDE /* Nebula Hunters GameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1AE0B7D2DD240D500D87FDE /* Build configuration list for PBXNativeTarget "Nebula Hunters GameUITests" */;
+			buildPhases = (
+				A1AE0B692DD240D500D87FDE /* Sources */,
+				A1AE0B6A2DD240D500D87FDE /* Frameworks */,
+				A1AE0B6B2DD240D500D87FDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1AE0B6F2DD240D500D87FDE /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A1AE0B702DD240D500D87FDE /* Nebula Hunters GameUITests */,
+			);
+			name = "Nebula Hunters GameUITests";
+			packageProductDependencies = (
+			);
+			productName = "Nebula Hunters GameUITests";
+			productReference = A1AE0B6D2DD240D500D87FDE /* Nebula Hunters GameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A1AE0B422DD240D300D87FDE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					A1AE0B492DD240D300D87FDE = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					A1AE0B622DD240D500D87FDE = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = A1AE0B492DD240D300D87FDE;
+					};
+					A1AE0B6C2DD240D500D87FDE = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = A1AE0B492DD240D300D87FDE;
+					};
+				};
+			};
+			buildConfigurationList = A1AE0B452DD240D300D87FDE /* Build configuration list for PBXProject "Nebula Hunters Game" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A1AE0B412DD240D300D87FDE;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A1AE0B4B2DD240D300D87FDE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A1AE0B492DD240D300D87FDE /* Nebula Hunters Game */,
+				A1AE0B622DD240D500D87FDE /* Nebula Hunters GameTests */,
+				A1AE0B6C2DD240D500D87FDE /* Nebula Hunters GameUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1AE0B482DD240D300D87FDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1AE0B612DD240D500D87FDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1AE0B6B2DD240D500D87FDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1AE0B462DD240D300D87FDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1AE0B5F2DD240D500D87FDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1AE0B692DD240D500D87FDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A1AE0B652DD240D500D87FDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1AE0B492DD240D300D87FDE /* Nebula Hunters Game */;
+			targetProxy = A1AE0B642DD240D500D87FDE /* PBXContainerItemProxy */;
+		};
+		A1AE0B6F2DD240D500D87FDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1AE0B492DD240D300D87FDE /* Nebula Hunters Game */;
+			targetProxy = A1AE0B6E2DD240D500D87FDE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A1AE0B752DD240D500D87FDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = P9P68W22JT;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A1AE0B762DD240D500D87FDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = P9P68W22JT;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A1AE0B782DD240D500D87FDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P9P68W22JT;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "myApps.Nebula-Hunters-Game";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A1AE0B792DD240D500D87FDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P9P68W22JT;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "myApps.Nebula-Hunters-Game";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A1AE0B7B2DD240D500D87FDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P9P68W22JT;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "myApps.Nebula-Hunters-GameTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nebula Hunters Game.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Nebula Hunters Game";
+			};
+			name = Debug;
+		};
+		A1AE0B7C2DD240D500D87FDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P9P68W22JT;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "myApps.Nebula-Hunters-GameTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nebula Hunters Game.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Nebula Hunters Game";
+			};
+			name = Release;
+		};
+		A1AE0B7E2DD240D500D87FDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P9P68W22JT;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "myApps.Nebula-Hunters-GameUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Nebula Hunters Game";
+			};
+			name = Debug;
+		};
+		A1AE0B7F2DD240D500D87FDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P9P68W22JT;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "myApps.Nebula-Hunters-GameUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Nebula Hunters Game";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1AE0B452DD240D300D87FDE /* Build configuration list for PBXProject "Nebula Hunters Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1AE0B752DD240D500D87FDE /* Debug */,
+				A1AE0B762DD240D500D87FDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1AE0B772DD240D500D87FDE /* Build configuration list for PBXNativeTarget "Nebula Hunters Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1AE0B782DD240D500D87FDE /* Debug */,
+				A1AE0B792DD240D500D87FDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1AE0B7A2DD240D500D87FDE /* Build configuration list for PBXNativeTarget "Nebula Hunters GameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1AE0B7B2DD240D500D87FDE /* Debug */,
+				A1AE0B7C2DD240D500D87FDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1AE0B7D2DD240D500D87FDE /* Build configuration list for PBXNativeTarget "Nebula Hunters GameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1AE0B7E2DD240D500D87FDE /* Debug */,
+				A1AE0B7F2DD240D500D87FDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A1AE0B422DD240D300D87FDE /* Project object */;
+}
