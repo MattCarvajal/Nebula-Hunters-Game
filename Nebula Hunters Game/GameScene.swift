@@ -13,76 +13,189 @@ class GameScene: SKScene {
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
     
+    // Joystick nodes
+    var joystickBase: SKSpriteNode!
+    var joystickStick:SKSpriteNode!
+    var isTouchingJoystick:Bool = false // Check to see if the stick is touched
+    var isIdle:Bool = false
+    
+    // Player node
+    var player: SKSpriteNode!
+    
+    // Direction var
+    var currentDirection: String = ""
+    
+    // Movement vector for smooth movement
+    var movementVector = CGVector(dx: 0, dy: 0)
+    
+    // Sprite frames to load namespace for animation
+    func loadAnimationFrames(baseName: String, count: Int) -> [SKTexture] {
+        var frames: [SKTexture] = []
+        for i in 0..<count {
+            let frameName = String(format: "\(baseName)%02d", i)
+            frames.append(SKTexture(imageNamed: frameName))
+        }
+        return frames
+    }
+    
+    // Animate sprite function that takes in a direction that controls sprite direction animation
+    func animatePlayer(direction: String) {
+        // Only animate if the direction changed or animation isn't running
+        if currentDirection != direction || player.action(forKey: "walking") == nil {
+           
+            currentDirection = direction // Store new direction (prevents animation from restarting
+            var frames: [SKTexture] = [] // Empty animation array
+            isIdle = false
+            player.removeAction(forKey: "idle")
+           
+            // For loop that cycles through images to animate direction movement
+            for i in 0..<9 {
+                let frameName = String(format: "%@%02d", direction, i)
+                frames.append(SKTexture(imageNamed: frameName))
+               
+                print("Loading frame: \(frameName)") // Tester
+
+            }
+
+            // Takes the frames array and animates it with 0.1 sec in between sprites
+            let animation = SKAction.repeatForever(SKAction.animate(with: frames, timePerFrame: 0.1))
+            player.run(animation, withKey: "walking") // Starts the animation for the player obj
+            
+            
+        }
+    }
+    
+    func animateIdle(){
+        var frames: [SKTexture] = [] // Animation array
+        for i in 0..<2{
+            let frameName = String(format: "idle%02d", i)
+            frames.append(SKTexture(imageNamed: frameName))
+            
+            print("Loading frame: \(frameName)") // Tester
+
+        }
+        let animation = SKAction.repeatForever(SKAction.animate(with: frames, timePerFrame: 0.5))
+        player.run(animation, withKey: "idle")
+        isIdle = true
+        
+    }
+
+    // DidMove method to add sprites to our scene
     override func didMove(to view: SKView) {
         
-        // Get label node from scene and store it for use later
-        self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
-        if let label = self.label {
-            label.alpha = 0.0
-            label.run(SKAction.fadeIn(withDuration: 2.0))
-        }
+        // === CAMERA SETUP
+        let cameraNode = SKCameraNode()
+        self.camera = cameraNode
+        addChild(cameraNode)
         
-        // Create shape node to use during mouse interaction
-        let w = (self.size.width + self.size.height) * 0.05
-        self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
+        // === PLAYER SETUP ===
+        player = SKSpriteNode(imageNamed: "forward00")
+        player.position = CGPoint(x: 0, y: 0)
+        player.zPosition = 5
+        addChild(player)
+        animateIdle()
         
-        if let spinnyNode = self.spinnyNode {
-            spinnyNode.lineWidth = 2.5
-            
-            spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 1)))
-            spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
-                                              SKAction.fadeOut(withDuration: 0.5),
-                                              SKAction.removeFromParent()]))
-        }
+        // === JOYSTICK SETUP
+        
+        // Assign sprite images to the joystick base and stick
+        joystickBase = SKSpriteNode(imageNamed: "JS_Circle")
+        joystickStick = SKSpriteNode(imageNamed: "JS_Ball")
+        
+        joystickBase.position = CGPoint(x: -self.size.width / 2 + 100, y: -self.size.height / 2 + 100) // Places JS in bottom right of the screen
+        joystickStick.position = joystickBase.position // Stick starts in the center
+        
+        // Ensures the stick is drawn on top of the base.
+        joystickBase.zPosition = 10
+        joystickStick.zPosition = 11
+        
+        joystickBase.setScale(0.2)  // 20% of original size
+        joystickStick.setScale(0.1)
+        
+        // Adds joystick parts to the scene to make them visable
+        cameraNode.addChild(joystickBase)
+        cameraNode.addChild(joystickStick)
+        
+        
     }
     
     
-    func touchDown(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.green
-            self.addChild(n)
-        }
-    }
-    
-    func touchMoved(toPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.blue
-            self.addChild(n)
-        }
-    }
-    
-    func touchUp(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.red
-            self.addChild(n)
-        }
-    }
-    
+    // What happens when touches begin
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let label = self.label {
-            label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
+        if let touch = touches.first{
+            let location = touch.location(in: camera!)
+            if joystickBase.contains(location){
+                isTouchingJoystick = true // Change status of true if touched
+                isIdle = false
+            }
         }
         
-        for t in touches { self.touchDown(atPoint: t.location(in: self)) }
     }
     
+    // When touches are moved function
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchMoved(toPoint: t.location(in: self)) }
+        guard isTouchingJoystick, let touch = touches.first else { return }
+
+        let location = touch.location(in: camera!)
+
+        let dx = location.x - joystickBase.position.x
+        let dy = location.y - joystickBase.position.y
+        let distance = sqrt(dx * dx + dy * dy)
+        let maxDistance: CGFloat = 50
+        let angle = atan2(dy, dx)
+
+        // Clamp joystick stick position to radius
+        if distance > maxDistance {
+            joystickStick.position = CGPoint(
+                x: joystickBase.position.x + cos(angle) * maxDistance,
+                y: joystickBase.position.y + sin(angle) * maxDistance
+            )
+        } else {
+            joystickStick.position = location
+        }
+
+        // Used for constant speed
+        if distance > 0 {
+            // Normalize direction for consistent speed
+            let normalizedDx = dx / distance
+            let normalizedDy = dy / distance
+            movementVector = CGVector(dx: normalizedDx, dy: normalizedDy)
+        } else {
+            movementVector = .zero
+        }
+
+        // Determine animation direction (8 frames per direction)
+        var direction = ""
+        if abs(dx) > abs(dy) {
+            direction = dx > 0 ? "right" : "left"
+        } else {
+            direction = dy > 0 ? "backwards" : "forward"
+        }
+
+        animatePlayer(direction: direction)
     }
-    
+
+    // When touches end
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
+        isTouchingJoystick = false
+        joystickStick.position = joystickBase.position
+        movementVector = .zero
+        player.removeAction(forKey: "walking")
+        currentDirection = ""
+        
+        animateIdle() // Run idle animation
     }
+
     
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
-    }
-    
-    
+    // What updates after every frame
     override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
+        let moveSpeed: CGFloat = 3.0
+        
+        // Move the player in the direction of the joystick
+        player.position.x += movementVector.dx * moveSpeed
+        player.position.y += movementVector.dy * moveSpeed
+        
+        // Make the camera follow the player
+        camera?.position = player.position
     }
+    
 }
