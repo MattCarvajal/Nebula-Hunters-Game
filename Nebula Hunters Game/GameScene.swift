@@ -88,12 +88,47 @@ class GameScene: SKScene {
         self.camera = cameraNode
         addChild(cameraNode)
         
+        // == MAP SETUP ==
+        // Check for map
+        guard let map = childNode(withName: "Map") as? SKSpriteNode else {
+            fatalError("❗️ Map node not found in scene")
+        }
+        
+        // Set up map border
+        if let map = childNode(withName: "Map")as? SKSpriteNode {
+            let boarder = SKPhysicsBody(edgeLoopFrom: map.frame)
+            boarder.isDynamic = false
+            map.physicsBody = boarder
+        }
+        
         // === PLAYER SETUP ===
         player = SKSpriteNode(imageNamed: "forward00")
-        player.position = CGPoint(x: 0, y: 0)
+        //player.position = map.position
+        //player.position = CGPoint(x: map.position.x, y: map.position.y) // center in map
+        // Spawn point for this map
+        if let spawn = childNode(withName: "SpawnPoint") {
+            player.position = spawn.position
+            camera?.position = player.position
+        }
+        
         player.zPosition = 5
         addChild(player)
         animateIdle()
+        
+        print("Map Frame: \(map.frame)")
+        print("Player Pos: \(player.position)")
+
+        
+        // === ADD PHYSICS BODY TO PLAYER ===
+        player.physicsBody = SKPhysicsBody(rectangleOf: player.size)
+        player.physicsBody?.isDynamic = true
+        player.physicsBody?.affectedByGravity = false
+        player.physicsBody?.allowsRotation = false
+
+        player.physicsBody?.categoryBitMask = 0x1 << 1       // player
+        player.physicsBody?.collisionBitMask = 0xFFFFFFFF     // collide with everything
+        player.physicsBody?.contactTestBitMask = 0            // (optional, for events)
+
         
         // === JOYSTICK SETUP
         
@@ -188,11 +223,12 @@ class GameScene: SKScene {
     
     // What updates after every frame
     override func update(_ currentTime: TimeInterval) {
-        let moveSpeed: CGFloat = 3.0
+        let moveSpeed: CGFloat = 100.0
         
-        // Move the player in the direction of the joystick
-        player.position.x += movementVector.dx * moveSpeed
-        player.position.y += movementVector.dy * moveSpeed
+        if let body = player.physicsBody {
+                body.velocity = CGVector(dx: movementVector.dx * moveSpeed,
+                                         dy: movementVector.dy * moveSpeed)
+            }
         
         // Make the camera follow the player
         camera?.position = player.position
