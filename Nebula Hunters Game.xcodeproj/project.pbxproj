@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A1AE0B8B2DDD397600D87FDE /* SKTiled in Frameworks */ = {isa = PBXBuildFile; productRef = A1AE0B8A2DDD397600D87FDE /* SKTiled */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		A1AE0B642DD240D500D87FDE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +33,22 @@
 		A1AE0B6D2DD240D500D87FDE /* Nebula Hunters GameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nebula Hunters GameUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		A1AE0B962DDD45BF00D87FDE /* Exceptions for "Nebula Hunters Game" folder in "Copy Bundle Resources" phase from "Nebula Hunters Game" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = A1AE0B482DD240D300D87FDE /* Resources */;
+			membershipExceptions = (
+				"MapResources/Sci-Fi_TileSet.tsx",
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A1AE0B4C2DD240D300D87FDE /* Nebula Hunters Game */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A1AE0B962DDD45BF00D87FDE /* Exceptions for "Nebula Hunters Game" folder in "Copy Bundle Resources" phase from "Nebula Hunters Game" target */,
+			);
 			path = "Nebula Hunters Game";
 			sourceTree = "<group>";
 		};
@@ -52,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1AE0B8B2DDD397600D87FDE /* SKTiled in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +130,7 @@
 			);
 			name = "Nebula Hunters Game";
 			packageProductDependencies = (
+				A1AE0B8A2DDD397600D87FDE /* SKTiled */,
 			);
 			productName = "Nebula Hunters Game";
 			productReference = A1AE0B4A2DD240D300D87FDE /* Nebula Hunters Game.app */;
@@ -195,6 +214,9 @@
 			);
 			mainGroup = A1AE0B412DD240D300D87FDE;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A1AE0B892DDD397600D87FDE /* XCLocalSwiftPackageReference "../../../Downloads/SKTiled" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A1AE0B4B2DD240D300D87FDE /* Products */;
 			projectDirPath = "";
@@ -562,6 +584,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		A1AE0B892DDD397600D87FDE /* XCLocalSwiftPackageReference "../../../Downloads/SKTiled" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../../Downloads/SKTiled;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A1AE0B8A2DDD397600D87FDE /* SKTiled */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SKTiled;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A1AE0B422DD240D300D87FDE /* Project object */;
 }

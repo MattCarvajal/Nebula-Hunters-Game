@@ -7,11 +7,13 @@
 
 import SpriteKit
 import GameplayKit
+import SKTiled
 
 class GameScene: SKScene {
     
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
+    var tilemap: SKTilemap?
     
     // Joystick nodes
     var joystickBase: SKSpriteNode!
@@ -89,16 +91,49 @@ class GameScene: SKScene {
         addChild(cameraNode)
         
         // == MAP SETUP ==
-        // Check for map
-        guard let map = childNode(withName: "Map") as? SKSpriteNode else {
-            fatalError("❗️ Map node not found in scene")
+        // TMX CHECKER FOR MAP TO MAKE SURE IT EXISTS
+        if let path = Bundle.main.path(forResource: "Sci-fi_Map", ofType: "tmx") {
+            print("✅ TMX path: \(path)")
+        } else {
+            print("❌ TMX file not found in bundle!")
         }
         
-        // Set up map border
-        if let map = childNode(withName: "Map")as? SKSpriteNode {
-            let boarder = SKPhysicsBody(edgeLoopFrom: map.frame)
+        // LOAD MAP
+        if let tilemap = SKTilemap.load(tmxFile: "Sci-fi_Map"){
+            tilemap.zPosition = -1 // Puts the map behind character and the JS
+            tilemap.setScale(3.0) // Scale of the map to adjust size
+            tilemap.position = CGPoint(x: 0, y: 0) // set position to origin
+            
+            // For each layer, set z position to -1 (debug issue of player behind map)
+            for layer in tilemap.layers{
+                layer.zPosition = -1
+            }
+            
+            addChild(tilemap)
+            self.tilemap = tilemap
+            
+        } else {
+            print("Failed to load map")
+        }
+        
+
+        // Map boarder setup
+        if let tilemap = self.tilemap{
+           // Manually make boarder due to top being open when calculating accumulated frame
+            let width = CGFloat(tilemap.size.width) * tilemap.tileSize.width * tilemap.xScale
+            let height = CGFloat(tilemap.size.height) * tilemap.tileSize.height * tilemap.yScale
+            let origin = CGPoint(x: tilemap.position.x - width / 2, y: tilemap.position.y - height / 2)
+            
+            // Define rectangle to make boarder with
+            let mapRect = CGRect(origin: origin, size: CGSize(width: width, height: height))
+            
+            // Define boarder
+            let boarder = SKPhysicsBody(edgeLoopFrom: mapRect)
             boarder.isDynamic = false
-            map.physicsBody = boarder
+            boarder.friction = 0
+            tilemap.physicsBody = boarder
+            
+            print("Boarder applied to map ✅ ")
         }
         
         // === PLAYER SETUP ===
@@ -115,7 +150,7 @@ class GameScene: SKScene {
         addChild(player)
         animateIdle()
         
-        print("Map Frame: \(map.frame)")
+        //print("Map Frame: \(tilemap.frame)")
         print("Player Pos: \(player.position)")
 
         
