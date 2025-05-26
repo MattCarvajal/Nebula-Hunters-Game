@@ -9,6 +9,7 @@ import SpriteKit
 import GameplayKit
 import SKTiled
 
+
 class GameScene: SKScene {
     
     private var label : SKLabelNode?
@@ -107,16 +108,19 @@ class GameScene: SKScene {
             // For each layer, set z position to -1 (debug issue of player behind map)
             for layer in tilemap.layers{
                 layer.zPosition = -1
+                
             }
             
             addChild(tilemap)
             self.tilemap = tilemap
+
             
         } else {
             print("Failed to load map")
+            
         }
         
-
+        
         // Map boarder setup
         if let tilemap = self.tilemap{
            // Manually make boarder due to top being open when calculating accumulated frame

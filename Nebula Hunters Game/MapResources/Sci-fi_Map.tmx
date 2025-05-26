@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="50" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="2" nextobjectid="1">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="50" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="18">
  <tileset firstgid="1" source="Sci-Fi_TileSet.tsx"/>
  <layer id="1" name="Tile Layer 1" width="50" height="40">
   <data encoding="csv">
@@ -45,4 +45,57 @@
 21,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,22
 </data>
  </layer>
+ <objectgroup id="3" name="Wall">
+  <object id="1" x="1.31717" y="-0.00605769" rotation="0.0494437">
+   <polygon points="0,0 14.0552,0 14.3155,639.771 -0.189948,639.83"/>
+  </object>
+  <object id="2" x="31.0974" y="625.769">
+   <polygon points="-5.41396,-1.47352 768.711,-1.31122 768.602,14.1337 -15.002,13.966"/>
+  </object>
+  <object id="3" x="784.108" y="-0.00139799">
+   <polygon points="0,0 15.7942,0 15.7224,615.728 0.0717916,624.086"/>
+  </object>
+  <object id="4" x="25.582" y="0.105618">
+   <polygon points="-10.0008,-0.169505 756.009,0.158428 758.529,15.6315 -10.0801,15.7371"/>
+  </object>
+  <object id="5" x="257.009" y="65.4206">
+   <polygon points="-0.136117,-2.10982 -0.53918,94.3566 15.0971,94.5363 13.6592,-2.15672"/>
+  </object>
+  <object id="6" x="272.1" y="144.53">
+   <polygon points="0,0 31.3003,-0.498809 31.6744,15.3384 0.249405,15.4631"/>
+  </object>
+  <object id="7" x="320.485" y="144.156">
+   <polygon points="0,0 31.3003,-0.498809 31.6744,15.3384 0.249405,15.4631"/>
+  </object>
+  <object id="8" x="400.294" y="144.53">
+   <polygon points="0,0 31.3003,-0.498809 31.6744,15.3384 0.249405,15.4631"/>
+  </object>
+  <object id="9" x="448.429" y="144.655">
+   <polygon points="0,0 31.3003,-0.498809 31.6744,15.3384 0.249405,15.4631"/>
+  </object>
+  <object id="10" x="496.939" y="144.405">
+   <polygon points="0,0 31.3003,-0.498809 31.6744,15.3384 0.249405,15.4631"/>
+  </object>
+  <object id="11" x="511.529" y="66.8209">
+   <polygon points="-0.0755207,-2.47843 16.7592,-2.47456 16.9595,76.0928 0.0580191,74.233"/>
+  </object>
+  <object id="12" x="270.727" y="65.0031">
+   <polygon points="0,0 237.865,-0.498809 240.708,15.3384 1.89534,15.4631"/>
+  </object>
+  <object id="13" x="479.967" y="465.011">
+   <polygon points="0,0 46.6221,-0.498809 47.1793,15.3384 0.371491,15.4631"/>
+  </object>
+  <object id="14" x="464.874" y="468.621">
+   <polygon points="0,0 14.8938,-3.97198 15.0718,122.139 0.118675,123.132"/>
+  </object>
+  <object id="15" x="480.241" y="576.29">
+   <polygon points="0,0 236.179,-0.498809 239.002,15.3384 1.8819,15.4631"/>
+  </object>
+  <object id="16" x="704.583" y="467.193">
+   <polygon points="0,0 14.0802,-3.5046 14.2485,107.767 0.112193,108.643"/>
+  </object>
+  <object id="17" x="656.422" y="464.462">
+   <polygon points="0,0 47.3001,-0.498809 47.8654,15.3384 0.376893,15.4631"/>
+  </object>
+ </objectgroup>
 </map>

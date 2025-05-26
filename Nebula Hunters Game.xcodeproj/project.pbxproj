@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A1AE0B8B2DDD397600D87FDE /* SKTiled in Frameworks */ = {isa = PBXBuildFile; productRef = A1AE0B8A2DDD397600D87FDE /* SKTiled */; };
+		A12E9E372DE3ED2F006A08DE /* SKTiled in Frameworks */ = {isa = PBXBuildFile; productRef = A12E9E362DE3ED2F006A08DE /* SKTiled */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +34,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		A1AE0B962DDD45BF00D87FDE /* Exceptions for "Nebula Hunters Game" folder in "Copy Bundle Resources" phase from "Nebula Hunters Game" target */ = {
+		A1AE0B9B2DE3DD6A00D87FDE /* Exceptions for "Nebula Hunters Game" folder in "Copy Bundle Resources" phase from "Nebula Hunters Game" target */ = {
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			buildPhase = A1AE0B482DD240D300D87FDE /* Resources */;
 			membershipExceptions = (
@@ -47,7 +47,7 @@
 		A1AE0B4C2DD240D300D87FDE /* Nebula Hunters Game */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				A1AE0B962DDD45BF00D87FDE /* Exceptions for "Nebula Hunters Game" folder in "Copy Bundle Resources" phase from "Nebula Hunters Game" target */,
+				A1AE0B9B2DE3DD6A00D87FDE /* Exceptions for "Nebula Hunters Game" folder in "Copy Bundle Resources" phase from "Nebula Hunters Game" target */,
 			);
 			path = "Nebula Hunters Game";
 			sourceTree = "<group>";
@@ -69,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1AE0B8B2DDD397600D87FDE /* SKTiled in Frameworks */,
+				A12E9E372DE3ED2F006A08DE /* SKTiled in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +130,7 @@
 			);
 			name = "Nebula Hunters Game";
 			packageProductDependencies = (
-				A1AE0B8A2DDD397600D87FDE /* SKTiled */,
+				A12E9E362DE3ED2F006A08DE /* SKTiled */,
 			);
 			productName = "Nebula Hunters Game";
 			productReference = A1AE0B4A2DD240D300D87FDE /* Nebula Hunters Game.app */;
@@ -215,7 +215,7 @@
 			mainGroup = A1AE0B412DD240D300D87FDE;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				A1AE0B892DDD397600D87FDE /* XCLocalSwiftPackageReference "../../../Downloads/SKTiled" */,
+				A12E9E392DE3F547006A08DE /* XCLocalSwiftPackageReference "../../../Downloads/SKTiled" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A1AE0B4B2DD240D300D87FDE /* Products */;
@@ -426,6 +426,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
@@ -456,6 +457,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
@@ -586,14 +588,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		A1AE0B892DDD397600D87FDE /* XCLocalSwiftPackageReference "../../../Downloads/SKTiled" */ = {
+		A12E9E392DE3F547006A08DE /* XCLocalSwiftPackageReference "../../../Downloads/SKTiled" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../../../Downloads/SKTiled;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A1AE0B8A2DDD397600D87FDE /* SKTiled */ = {
+		A12E9E362DE3ED2F006A08DE /* SKTiled */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SKTiled;
 		};
