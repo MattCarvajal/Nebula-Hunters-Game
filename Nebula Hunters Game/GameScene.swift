@@ -31,6 +31,13 @@ class GameScene: SKScene {
     // Movement vector for smooth movement
     var movementVector = CGVector(dx: 0, dy: 0)
     
+    // Physics stuff
+    struct PhysicsCategory {
+        static let player: UInt32 = 0x1 << 0
+        static let wall: UInt32   = 0x1 << 1
+    }
+    
+    
     // Sprite frames to load namespace for animation
     func loadAnimationFrames(baseName: String, count: Int) -> [SKTexture] {
         var frames: [SKTexture] = []
@@ -113,7 +120,42 @@ class GameScene: SKScene {
             
             addChild(tilemap)
             self.tilemap = tilemap
+            
+            // Wall physics
+            if let wallLayer = tilemap.tileLayers(named: "Walls").first {
+                let tileSize = tilemap.tileSize
+                let mapSize  = tilemap.size
 
+                for y in 0..<Int(mapSize.height) {
+                    for x in 0..<Int(mapSize.width) {
+                        // only place a body where there's actually a tile
+                        if wallLayer.tileAt(x, y) != nil {
+                            
+                            // bottom-left corner of the tile in layer coords
+                            let rawPos = wallLayer.pointForCoordinate(x, y)
+                            
+                            let centerPos = CGPoint(
+                                x: rawPos.x + tileSize.width * 0.15,
+                                y: rawPos.y + tileSize.height * 0.15
+                            )
+                            
+                            // make your empty node at that center point
+                            let wallNode = SKNode()
+                            wallNode.position = centerPos
+                            
+                            // give it a physics body the same size as one tile
+                            let body = SKPhysicsBody(rectangleOf: tileSize)
+                            body.isDynamic           = false
+                            body.categoryBitMask     = PhysicsCategory.wall
+                            body.contactTestBitMask  = PhysicsCategory.player
+                            wallNode.physicsBody     = body
+                            
+                            //add into the layer so it picks up the map’s transform
+                            wallLayer.addChild(wallNode)
+                        }
+                    }
+                }
+            }
             
         } else {
             print("Failed to load map")
