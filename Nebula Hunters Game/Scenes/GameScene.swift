@@ -163,24 +163,24 @@ class GameScene: SKScene {
         }
         
         
-        // Map boarder setup
-        if let tilemap = self.tilemap{
-           // Manually make boarder due to top being open when calculating accumulated frame
-            let width = CGFloat(tilemap.size.width) * tilemap.tileSize.width * tilemap.xScale
-            let height = CGFloat(tilemap.size.height) * tilemap.tileSize.height * tilemap.yScale
-            let origin = CGPoint(x: tilemap.position.x - width / 2, y: tilemap.position.y - height / 2)
-            
-            // Define rectangle to make boarder with
-            let mapRect = CGRect(origin: origin, size: CGSize(width: width, height: height))
-            
-            // Define boarder
-            let boarder = SKPhysicsBody(edgeLoopFrom: mapRect)
-            boarder.isDynamic = false
-            boarder.friction = 0
-            tilemap.physicsBody = boarder
-            
-            print("Boarder applied to map ✅ ")
-        }
+//        // Map boarder setup
+//        if let tilemap = self.tilemap{
+//           // Manually make boarder due to top being open when calculating accumulated frame
+//            let width = CGFloat(tilemap.size.width) * tilemap.tileSize.width * tilemap.xScale
+//            let height = CGFloat(tilemap.size.height) * tilemap.tileSize.height * tilemap.yScale
+//            let origin = CGPoint(x: tilemap.position.x - width / 2, y: tilemap.position.y - height / 2)
+//            
+//            // Define rectangle to make boarder with
+//            let mapRect = CGRect(origin: origin, size: CGSize(width: width, height: height))
+//            
+//            // Define boarder
+//            let boarder = SKPhysicsBody(edgeLoopFrom: mapRect)
+//            boarder.isDynamic = false
+//            boarder.friction = 0
+//            tilemap.physicsBody = boarder
+//            
+//            print("Boarder applied to map ✅ ")
+//        }
         
         // === PLAYER SETUP ===
         player = SKSpriteNode(imageNamed: "forward00")
