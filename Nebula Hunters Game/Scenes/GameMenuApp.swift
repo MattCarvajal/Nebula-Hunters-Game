@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-//@main
-
+@main
 struct GameMenuApp: App{
     var body : some Scene{
         WindowGroup{
