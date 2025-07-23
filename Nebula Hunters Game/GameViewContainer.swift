@@ -24,7 +24,6 @@ struct GameViewContainer: View {
                 scene: scene,
                 debugOptions: [
                   .showsFPS,
-                  .showsNodeCount,
                   .showsPhysics
                 ]
             )

@@ -25,6 +25,9 @@ class GameScene: SKScene {
     // Player node
     var player: SKSpriteNode!
     
+    // Enemy node
+    var enemy: SKSpriteNode!
+    
     // Direction var
     var currentDirection: String = ""
     
@@ -75,17 +78,24 @@ class GameScene: SKScene {
         }
     }
     
-    func animateIdle(){
+    func animateIdle(character: String){
         var frames: [SKTexture] = [] // Animation array
         for i in 0..<2{
-            let frameName = String(format: "idle%02d", i)
+            let frameName = String(format: character+"Idle%02d", i)
             frames.append(SKTexture(imageNamed: frameName))
             
             print("Loading frame: \(frameName)") // Tester
 
         }
         let animation = SKAction.repeatForever(SKAction.animate(with: frames, timePerFrame: 0.5))
-        player.run(animation, withKey: "idle")
+        
+        // Where we decide who to animate
+        if (character == "player"){
+            player.run(animation, withKey: "Idle")
+        } else if (character == "enemy"){
+            enemy.run(animation, withKey: "Idle")
+        }
+
         isIdle = true
         
     }
@@ -194,14 +204,14 @@ class GameScene: SKScene {
         
         player.zPosition = 5
         addChild(player)
-        animateIdle()
+        animateIdle(character: "player")
         
         //print("Map Frame: \(tilemap.frame)")
         print("Player Pos: \(player.position)")
 
         
         // === ADD PHYSICS BODY TO PLAYER ===
-        player.physicsBody = SKPhysicsBody(rectangleOf: player.size)
+        player.physicsBody = SKPhysicsBody(rectangleOf: player.size) // might want to change this for more percise hitbox
         player.physicsBody?.isDynamic = true
         player.physicsBody?.affectedByGravity = false
         player.physicsBody?.allowsRotation = false
@@ -209,6 +219,34 @@ class GameScene: SKScene {
         player.physicsBody?.categoryBitMask = 0x1 << 1       // player
         player.physicsBody?.collisionBitMask = 0xFFFFFFFF     // collide with everything
         player.physicsBody?.contactTestBitMask = 0            // (optional, for events)
+
+        // === ENEMY SETUP ===
+        enemy = SKSpriteNode(imageNamed: "enemyIdle00")
+        //player.position = map.position
+        //player.position = CGPoint(x: map.position.x, y: map.position.y) // center in map
+        // Spawn point for this map
+        if let enemySpawn = childNode(withName: "EnemySpawnPoint") {
+            enemy.position = enemySpawn.position
+           
+        }
+        
+        enemy.zPosition = 5
+        addChild(enemy)
+        animateIdle(character: "enemy")
+        
+        //print("Map Frame: \(tilemap.frame)")
+        print("Enemy Pos: \(enemy.position)")
+
+        
+        // === ADD PHYSICS BODY TO PLAYER ===
+        enemy.physicsBody = SKPhysicsBody(rectangleOf: enemy.size) // might want to change this for more percise hitbox
+        enemy.physicsBody?.isDynamic = true
+        enemy.physicsBody?.affectedByGravity = false
+        enemy.physicsBody?.allowsRotation = false
+
+        enemy.physicsBody?.categoryBitMask = 0x1 << 1       // enemy
+        enemy.physicsBody?.collisionBitMask = 0xFFFFFFFF     // collide with everything
+        enemy.physicsBody?.contactTestBitMask = 0            // (optional, for events)
 
         
         // === JOYSTICK SETUP
@@ -298,7 +336,7 @@ class GameScene: SKScene {
         player.removeAction(forKey: "walking")
         currentDirection = ""
         
-        animateIdle() // Run idle animation
+        animateIdle(character: "player") // Run idle animation
     }
 
     
